@@ -1,0 +1,21 @@
+{
+  "name": "neotinder",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4",
+    "less-middleware": "^2.2.1",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.4.5",
+    "mongoose": "^5.0.4",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1"
+  }
+}
