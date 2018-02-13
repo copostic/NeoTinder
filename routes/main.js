@@ -4,9 +4,10 @@ module.exports = function(app, passport) {
         res.render('index', {title: 'Express'});
     });
 
-    app.get('/auth/facebook', passport.authenticate('facebook', {
-        scope: ['public_profile', 'email']
-    }));
+    app.get('/auth/facebook',
+        passport.authenticate('facebook', {
+            scope: ['public_profile', 'email', 'user_friends']
+        }));
 
     app.get('/auth/facebook/callback',
         passport.authenticate('facebook', {
