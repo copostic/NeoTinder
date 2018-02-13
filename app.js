@@ -9,6 +9,9 @@ const express = require('express'),
     lessMiddleware = require('less-middleware'),
     app = express();
 
+var configDB = require('./config/database.js');
+mongoose.connect(configDB.url);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

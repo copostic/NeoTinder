@@ -1,5 +1,5 @@
 const mongoose = require('mongoose'),
- Schema = mongoose.Schema;
+Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
     facebook         : {
@@ -14,3 +14,5 @@ const UserSchema = new Schema({
         interestedIn : String
     }
 });
+
+module.exports = mongoose.model('User', UserSchema);
