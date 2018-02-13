@@ -4,7 +4,7 @@ module.exports = function(app, passport) {
         res.render('index', {title: 'Express'});
     });
 
-    app.get('/auth/facebook',
+    app.use('/auth/facebook',
         passport.authenticate('facebook', {
             scope: ['public_profile', 'email', 'user_friends']
         }));
