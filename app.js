@@ -33,7 +33,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./config/passport')(passport);
-require('./routes/main.js')(app, passport);
+require('./routes/router.js')(app, passport);
 
 // error handler
 app.use(function(err, req, res, next) {

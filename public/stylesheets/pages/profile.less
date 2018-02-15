@@ -1,15 +1,55 @@
 body {
-	div#userInfos {
-		.div;
+	section#profile {
+		div#userInfos {
+			.div;
 
-		img#profilePicture {
-			display: block;
-			border-radius: 50%;
-			margin: 0 auto;
+			img#profilePicture {
+				display: block;
+				border-radius: 50%;
+				margin: 0 auto;
+				width: 150px;
+			}
+
+			p#userName {
+				margin: 10px 0;
+				text-align: center;
+				.opensans_semibold;
+				.fs24;
+			}
+			p#userAge {
+				margin: 0;
+				text-align: center;
+				.fs20;
+			}
 		}
+		div#buttons {
+			.div;
+			margin-top: 40px;
+			a#settings, a#changeInfo {
+				margin: 0 auto;
+				border-radius: 50%;
+				padding: 18px 20px;
+				.fs30;
+				border: none;
+				background: #ECF0F1;
+				color: @grey;
 
-		p{
-			text-align: center;
+				&:hover {
+					background: #DFE3E4;
+					color: #727272;
+				}
+			}
+		}
+	}
+
+	section#settings {
+		.div;
+		div.card{
+			.div(@width:auto);
+			padding: 10px;
+			margin:10px;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+			border-radius: 5%;
 		}
 	}
 }

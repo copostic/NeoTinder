@@ -1,3 +1,4 @@
+const profileController = require('../controllers/profile');
 module.exports = function(app, passport) {
 
     app.get('/', function(req, res, next) {
@@ -28,11 +29,9 @@ module.exports = function(app, passport) {
         res.redirect('/');
     });
 
-    app.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile', {
-            user: req.user
-        });
-    });
+    app.get('/profile', isLoggedIn, profileController.index);
+
+    app.get('/profile/settings', isLoggedIn, profileController.settings);
 
     app.use(function(req, res, next) {
         var err = new Error('Not Found');
@@ -45,6 +44,6 @@ module.exports = function(app, passport) {
         if (req.isAuthenticated())
             return next();
 
-        res.redirect('/');
+        res.redirect('/auth/facebook/');
     }
 };

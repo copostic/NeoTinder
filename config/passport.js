@@ -61,8 +61,6 @@ module.exports = function(passport) {
                     user.facebook.photo = profile.photos ? profile.photos[0].value : '/img/faces/unknown-user-pic.jpg';
                     user.facebook.birthday = profile._json.birthday;
                     user.facebook.gender = profile.gender;
-                    console.log(profile);
-
                     user.save(function(err) {
                         if (err)
                             return done(err);
