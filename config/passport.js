@@ -35,7 +35,8 @@ module.exports = function(passport) {
                             newUser.facebook.name = profile.name.givenName + ' ' + profile.name.familyName; // look at the passport user profile to see how names are returned
                             newUser.facebook.email = profile.emails[0].value; // facebook can return multiple emails so we'll take the first
                             newUser.facebook.photo = profile.photos ? profile.photos[0].value : '/img/faces/unknown-user-pic.jpg';
-
+                            user.facebook.birthday = profile._json.birthday;
+                            user.facebook.gender = profile.gender;
                             // save our user to the database
                             newUser.save(function(err) {
                                 if (err)
@@ -58,8 +59,9 @@ module.exports = function(passport) {
                     user.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
                     user.facebook.email = (profile.emails[0].value || '').toLowerCase();
                     user.facebook.photo = profile.photos ? profile.photos[0].value : '/img/faces/unknown-user-pic.jpg';
-
-
+                    user.facebook.birthday = profile._json.birthday;
+                    user.facebook.gender = profile.gender;
+                    console.log(profile);
 
                     user.save(function(err) {
                         if (err)
