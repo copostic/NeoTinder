@@ -26,7 +26,6 @@ body {
 			.div;
 			margin-top: 40px;
 			a#settings, a#changeInfo {
-				margin: 0 auto;
 				border-radius: 50%;
 				padding: 18px 20px;
 				.fs30;
@@ -39,17 +38,25 @@ body {
 					color: #727272;
 				}
 			}
+			p {
+				margin-top: 20px;
+			}
 		}
 	}
 
 	section#settings {
 		.div;
-		div.card{
+		div.card {
 			.div(@width:auto);
 			padding: 10px;
-			margin:10px;
-			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
-			border-radius: 5%;
+			margin: 10px;
+			box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+			span.text{
+				display: inline-block;
+				margin-top: 10px;
+			}
 		}
 	}
 }

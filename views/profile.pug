@@ -1,16 +1,16 @@
 extends layout
 
 block content
-    section#profile
-        #userInfos
+    section#profile.container
+        #userInfos.row
             img#profilePicture(src=user.facebook.photo)
             p#userName #{user.facebook.name}
             p#userAge #{userAge} ans
-        #buttons
-            .demi-column.center
+
+        #buttons.row
+            .col-md-6.col-sm-6.col-xs-6.text-center
                 a(class="button" id="settings" href="/profile/settings"): i.fas.fa-cog
                 p Réglages
-            .demi-column.center
+            .col-md-6.col-sm-6.col-xs-6.text-center
                 a(class="button" id="changeInfo" href="/profile/update"): i.fas.fa-pencil-alt
                 p Modifier Vos Infos
-
