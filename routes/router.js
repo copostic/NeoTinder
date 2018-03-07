@@ -7,7 +7,8 @@ module.exports = function(app, passport) {
 
     app.use('/auth/facebook',
         passport.authenticate('facebook', {
-            scope: ['public_profile', 'email', 'user_friends', 'user_birthday']
+            scope: ['public_profile', 'email', 'user_friends', 'user_birthday'],
+            authType: 'rerequest'
         }));
 
     app.get('/auth/facebook/callback',
@@ -15,14 +16,15 @@ module.exports = function(app, passport) {
             successRedirect: '/profile',
             failureRedirect: '/'
         }) , function(req,res) {
-            res.render('json', {data: JSON.stringify(req.user.access_token)});
+            console.log(req.user);
         }, function(err,req,res,next) {
-            res.redirect('/auth/facebook/');
+            res.redirect('/');
             if(err) {
                 res.status(400);
                 res.render('error', {message: err.message});
             }
         });
+
 
     app.get('/logout', function(req, res) {
         req.logout();

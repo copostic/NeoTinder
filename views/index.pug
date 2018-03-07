@@ -1,5 +1,46 @@
 extends layout
 
 block content
-  h1= COUCOU
-  p Welcome to #{title}
+  section#mainPage
+      .container
+          .stack
+              .final-message Plus de chattes dispo !
+              ul
+                  li
+                      #card10.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/300/200')
+                  li
+                      #card9.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/400/200')
+                  li
+                      #car8.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/450/200')
+                  li
+                      #card7.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/800/200')
+                  li
+                      #card6.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/300/200')
+                  li
+                      #card5.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/400/200')
+                  li
+                      #card4.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/300/200')
+                  li
+                      #card3.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/300/200')
+                  li
+                      #card2.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/600/200')
+                  li
+                      #card1.card.jsSwipingCard
+                          .card-illustration.jsLazyload(data-original='https://placekitten.com/g/400/200')
+          .btn-controls.text-center#bottomButtons
+              button.bottomButton.jsLeftTrigger.buttonNo(type='button'): i.fas.fa-times
+              button.bottomButton.jsRightTrigger.buttonYes(type='button'): i.fas.fa-heart
+
+  script(src="javascript/vendor/jquery.min.js")
+  script(src="javascript/vendor/hammer.min.js")
+  script(src="javascript/vendor/jquery.lazyload.min.js")
+  script(src="javascript/swipe.js")

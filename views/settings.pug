@@ -2,13 +2,16 @@ extends layout
 
 block content
     section#settings
-        div.card
-            .demi-column.left
-                span Afficher mon profil
+        div.card.row
+            .left.col-md-8.col-sm-8.col-xs-8
+                span.text.fs15 Afficher mon profil sur Tineo
 
-            .demi-column.right.valign_middle
+            .right.col-md-4.col-sm-4.col-xs-4
                 label.switch
                     input#showMe(type="checkbox")
                     span.slider.round
 
-        div.card
+        div.card.row
+            .left.col-md-12.center.fs16.opensans_bold
+                a( id="disconnect" href="/logout") Déconnexion
+
